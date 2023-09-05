@@ -4,7 +4,7 @@ Multitask Compressive Sensing: Shihao Ji, David Dunson†, and Lawrence Carin
 https://www.researchgate.net/publication/224514217_Multitask_Compressive_Sensing
 """
 
-from .bayes_utils import *
+from .utils import *
 
 
 # process results

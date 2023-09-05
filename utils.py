@@ -32,3 +32,10 @@ def vector_to_diagonal_matrix(vector):
 # compute relative error
 def compute_relative_error(V1_true, V2_approx):
     return np.linalg.norm(V1_true - V2_approx) / np.linalg.norm(V1_true)
+
+
+# normalizes a matrix
+def normalize(matrix):
+    col_norms = np.linalg.norm(matrix, axis=0)
+    normalized_matrix = matrix / col_norms
+    return normalized_matrix
