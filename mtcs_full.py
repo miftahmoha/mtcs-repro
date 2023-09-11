@@ -8,24 +8,6 @@ import stan
 from .utils import *
 
 
-# adds the parent directory to the sys.path list to import utils module
-parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..")) + "/pursuit"
-sys.path.append(parent_dir)
-
-
-# checks that input is a numpy array
-def check_numpy_array(input_data):
-    if not isinstance(input_data, np.ndarray):
-        raise TypeError("Input must be a NumPy array.")
-
-
-# normalizes a matrix
-def normalize(matrix):
-    col_norms = np.linalg.norm(matrix, axis=0)
-    normalized_matrix = matrix / col_norms
-    return normalized_matrix
-
-
 # reads the BPS stan model
 with open("./bayes/mtcs_full.stan", "r") as file:
     bps_stan = file.read()
